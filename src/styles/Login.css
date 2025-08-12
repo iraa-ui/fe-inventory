@@ -1,0 +1,95 @@
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%; 
+  background: #fff;
+  padding: 550px;
+}
+
+.card {
+  width: 400px; 
+  background: #f7f7f8; 
+  padding: 40px 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.logo {
+  width: 100px;  
+  height: auto; 
+  display: block;
+  margin: 0 auto 12px; /* jarak ke bawah */
+}
+
+.title {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 32px;
+  color: #111;
+  font-weight: 700;
+  margin-bottom: 24px; /* jarak ke form */
+}
+
+.form {
+  width: 100%;
+}
+
+.field {
+  display: block;
+  text-align: left;
+  margin-bottom: 20px; /* jarak antar input */
+}
+
+.label-text {
+  display: block;
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 6px;
+  padding-left: 6px;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+  padding: 6px 8px;
+  background: #fff;
+}
+
+.text-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  padding: 6px;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  color: #9b9b9b;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 40px;
+  background: #262626; 
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* responsive */
+@media (max-width: 480px) {
+  .card { padding: 24px 16px; }
+  .title { font-size: 24px; }
+}
