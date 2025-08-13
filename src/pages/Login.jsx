@@ -1,51 +1,50 @@
-import React from "react";
-import "../styles/Login.css";
-import { FaUser, FaEye } from "react-icons/fa";
-import logo from "../logo/logo.png";
+import React, { useState } from 'react';
+import { FaUser, FaEyeSlash } from 'react-icons/fa';
+import '../styles/Login.css';
 
-export default function Login() {
+function Login() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ username, password });
+  };
+
   return (
-    <div className="page-wrapper">
-      <div className="card">
-        <img src={logo} alt="logo" className="logo" />
-        <h1 className="title">Login</h1>
-        <form className="form">
-          
-          <div className="field">
-            <label className="label-text">Username</label>
-            <div className="input-row">
-              <input
-                type="text"
-                className="text-input"
-                placeholder="Username"
-              />
-              <span className="icon">
-                <FaUser />
-              </span>
-            </div>
-          </div>
+    <div className="login-container">
+      <form className="login-card" onSubmit={handleSubmit}>
+        <h2 className="login-title">Login</h2>
 
-          <div className="field">
-            <label className="label-text">Password</label>
-            <div className="input-row">
-              <input
-                type="password"
-                className="text-input"
-                placeholder="Password"
-              />
-              <span className="icon">
-                <FaEye />
-              </span>
-            </div>
-          </div>
+        {/* Username */}
+        <div className="input-group">
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <FaUser className="icon" />
+        </div>
 
-          <div className="spacer"></div>
+        {/* Password */}
+        <div className="input-group">
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <FaEyeSlash className="icon" />
+        </div>
 
-          <button className="submit-btn" type="submit">
-            LOGIN
-          </button>
-        </form>
-      </div>
+        {/* Tombol */}
+        <button type="submit" className="login-btn">
+          LOGIN
+        </button>
+      </form>
     </div>
   );
 }
+
+export default Login;

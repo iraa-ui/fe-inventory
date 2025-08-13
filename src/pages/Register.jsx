@@ -1,68 +1,62 @@
-import React from "react";
-import "../styles/Register.css";
-import { FaUser, FaEnvelope, FaEye } from "react-icons/fa";
-import logo from "../logo/logo.png";
+import React, { useState } from 'react';
+import { FaUser, FaEyeSlash } from 'react-icons/fa';
+import '../styles/Register.css';
 
-export default function App() {
+function Register() {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ username, email, password });
+  };
+
   return (
-    <div className="page-wrapper">
-      <div className="card">
-         <img src={logo} alt="logo" className="logo"/>
-        <h1 className="title">Register</h1>
-        <form className="form">
-          
-          <div className="field">
-            <label className="label-text">Username</label>
-            <div className="input-row">
-              <input
-                type="text"
-                className="text-input"
-                placeholder="Username"
-              />
-              <span className="icon">
-                <FaUser />
-              </span>
-            </div>
-          </div>
+    <div className="register-container">
+      <form className="register-card" onSubmit={handleSubmit}>
+        <h2 className="register-title">Register</h2>
 
-          
-          <div className="field">
-            <label className="label-text">Email</label>
-            <div className="input-row">
-              <input
-                type="email"
-                className="text-input"
-                placeholder="Email"
-              />
-              <span className="icon">
-                <FaEnvelope />
-              </span>
-            </div>
-          </div>
+        {/* Username */}
+        <div className="input-group">
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <FaUser className="icon" />
+        </div>
 
-         
-          <div className="field">
-            <label className="label-text">Password</label>
-            <div className="input-row">
-              <input
-                type="password"
-                className="text-input"
-                placeholder="Password"
-              />
-              <span className="icon">
-                <FaEye />
-              </span>
-            </div>
-          </div>
+        {/* Email */}
+        <div className="input-group">
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <FaUser className="icon" />
+        </div>
 
-          <div className="spacer"></div>
+        {/* Password */}
+        <div className="input-group">
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <FaEyeSlash className="icon" />
+        </div>
 
-          <button className="submit-btn" type="submit">
-            REGISTER
-          </button>
-        </form>
-      </div>
+        {/* Button */}
+        <button type="submit" className="register-btn">
+          REGISTER
+        </button>
+      </form>
     </div>
   );
 }
 
+export default Register;
