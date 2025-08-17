@@ -1,28 +1,27 @@
 import React from "react";
-import "../styles/Peminjaman.css";
+import "../styles/Peminjaman.css"; 
 import logo from "../logo/logo.png";
-
-function Peminjaman() {
+function Pengembalian() {
   return (
     <div className="layout">
-   
+    
       <aside className="sidebar">
-        <img src={logo} alt="Logo" className="brand-logo" />
+         <img src={logo} alt="Logo" className="brand-logo" />
         <nav className="sidebar-menu">
           <a href="#" className="menu-item">📦 Inventory</a>
-          <a href="#" className="menu-item active">📦 Peminjaman</a>
-          <a href="#" className="menu-item">📦 Pengembalian</a>
+          <a href="#" className="menu-item">📦 Peminjaman</a>
+          <a href="#" className="menu-item active">📦 Pengembalian</a>
         </nav>
       </aside>
 
       <main className="main-content">
         <div className="peminjaman-container">
-          <h2 className="peminjaman-title">Peminjaman</h2>
-          <p className="peminjaman-subtitle">Form Peminjaman</p>
+          <h2 className="peminjaman-title">Pengembalian</h2>
+          <p className="peminjaman-subtitle">Form Pengembalian</p>
 
           <form className="peminjaman-form">
             <div className="form-group">
-              <label>Tanggal Peminjaman</label>
+              <label>Tanggal Pengembalian</label>
               <input type="date" />
             </div>
 
@@ -47,13 +46,13 @@ function Peminjaman() {
             </div>
 
             <div className="form-group">
-              <label>Keterangan</label>
-              <input type="text" />
+              <label>Kondisi Barang</label>
+              <input type="text" placeholder="Baik / Rusak / Hilang" />
             </div>
 
             <div className="form-group">
-              <label>Tanggal Pengembalian</label>
-              <input type="date" />
+              <label>Keterangan</label>
+              <input type="text" />
             </div>
 
             <div className="form-buttons">
@@ -67,4 +66,4 @@ function Peminjaman() {
   );
 }
 
-export default Peminjaman;
+export default Pengembalian;

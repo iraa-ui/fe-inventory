@@ -7,37 +7,42 @@
 }
 
 .register-card {
-  background: #ededed;
+  background: #ffffff;
   padding: 40px 30px;
   width: 400px;
-  height: 450px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Biar isi tetap rapi */
 }
 
-
+.brand-logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 20px;
+}
 
 .register-title {
-  font-size: 24px; /* dari 28px jadi 24px */
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 25px;
+  color: #333;
 }
 
 .input-group {
   position: relative;
   width: 100%;
-  margin-bottom: 15px; /* lebih rapat */
+  margin-bottom: 20px;
 }
 
 .input-group input {
   width: 100%;
-  padding: 8px 35px 8px 0; /* lebih kecil */
+  padding: 10px 35px 10px 5px;
   border: none;
   border-bottom: 1px solid #ccc;
   background: transparent;
-  font-size: 13px;
+  font-size: 14px;
   outline: none;
 }
 
@@ -47,11 +52,11 @@
 
 .input-group .icon {
   position: absolute;
-  right: 0;
+  right: 5px;
   top: 50%;
   transform: translateY(-50%);
   color: #888;
-  font-size: 14px; /* kecilin icon */
+  font-size: 16px;
 }
 
 .register-btn {
@@ -64,6 +69,7 @@
   border-radius: 50px;
   cursor: pointer;
   font-size: 14px;
+  transition: background 0.3s ease;
 }
 
 .register-btn:hover {

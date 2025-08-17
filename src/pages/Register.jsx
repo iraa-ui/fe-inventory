@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaUser, FaEyeSlash } from 'react-icons/fa';
 import '../styles/Register.css';
+import logo from "../logo/logo.png";
 
 function Register() {
   const [username, setUsername] = useState('');
@@ -15,9 +16,10 @@ function Register() {
   return (
     <div className="register-container">
       <form className="register-card" onSubmit={handleSubmit}>
+        <img src={logo} alt="Logo" className="brand-logo" />
         <h2 className="register-title">Register</h2>
 
-        {/* Username */}
+
         <div className="input-group">
           <input
             type="text"
@@ -28,7 +30,7 @@ function Register() {
           <FaUser className="icon" />
         </div>
 
-        {/* Email */}
+
         <div className="input-group">
           <input
             type="email"
@@ -39,7 +41,7 @@ function Register() {
           <FaUser className="icon" />
         </div>
 
-        {/* Password */}
+
         <div className="input-group">
           <input
             type="password"
@@ -50,7 +52,7 @@ function Register() {
           <FaEyeSlash className="icon" />
         </div>
 
-        {/* Button */}
+
         <button type="submit" className="register-btn">
           REGISTER
         </button>

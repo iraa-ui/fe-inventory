@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaUser, FaEyeSlash } from 'react-icons/fa';
 import '../styles/Login.css';
+import logo from '../logo/logo.png';
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -14,9 +15,10 @@ function Login() {
   return (
     <div className="login-container">
       <form className="login-card" onSubmit={handleSubmit}>
+         <img src={logo} alt="Logo" className="brand-logo" />
         <h2 className="login-title">Login</h2>
 
-        {/* Username */}
+        
         <div className="input-group">
           <input
             type="text"
@@ -27,7 +29,7 @@ function Login() {
           <FaUser className="icon" />
         </div>
 
-        {/* Password */}
+      
         <div className="input-group">
           <input
             type="password"
@@ -38,7 +40,7 @@ function Login() {
           <FaEyeSlash className="icon" />
         </div>
 
-        {/* Tombol */}
+       
         <button type="submit" className="login-btn">
           LOGIN
         </button>
