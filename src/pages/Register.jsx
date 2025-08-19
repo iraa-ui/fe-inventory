@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import { FaUser, FaEyeSlash } from 'react-icons/fa';
 import '../styles/Register.css';
 import logo from "../logo/logo.png";
@@ -51,11 +52,11 @@ function Register() {
           />
           <FaEyeSlash className="icon" />
         </div>
-
-
-        <button type="submit" className="register-btn">
-          REGISTER
-        </button>
+           <Link to="/login" style={{ width: "100%", display: "block", textDecoration: "none" }}>
+                <button type="button" className="register-btn">
+                    REGISTER
+                </button>
+            </Link>
       </form>
     </div>
   );

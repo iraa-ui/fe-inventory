@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import { FaUser, FaEyeSlash } from 'react-icons/fa';
 import '../styles/Login.css';
 import logo from '../logo/logo.png';
@@ -39,11 +40,12 @@ function Login() {
           />
           <FaEyeSlash className="icon" />
         </div>
+        <Link to="/" style={{ width: "100%", display: "block", textDecoration: "none" }}>
+             <button type="button" className="login-btn">
+                 LOGIN
+             </button>
+        </Link>
 
-       
-        <button type="submit" className="login-btn">
-          LOGIN
-        </button>
       </form>
     </div>
   );
