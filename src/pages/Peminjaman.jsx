@@ -1,6 +1,7 @@
 import React from "react";
-import "../styles/Peminjaman.css";
+import "../styles/main-layout.css";
 import logo from "../logo/logo.png";
+import { Link } from "react-router-dom";
 
 function Peminjaman() {
   return (
@@ -9,10 +10,25 @@ function Peminjaman() {
       <aside className="sidebar">
         <img src={logo} alt="Logo" className="brand-logo" />
         <nav className="sidebar-menu">
-          <a href="#" className="menu-item">📦 Inventory</a>
-          <a href="#" className="menu-item active">📦 Peminjaman</a>
-          <a href="#" className="menu-item">📦 Pengembalian</a>
-        </nav>
+  <Link
+    className={`menu-item${location.pathname === "/" ? " active" : ""}`}
+    to="/"
+  >
+    Inventory
+  </Link>
+  <Link
+    className={`menu-item${location.pathname === "/peminjaman" ? " active" : ""}`}
+    to="/peminjaman"
+  >
+    Peminjaman
+  </Link>
+  <Link
+    className={`menu-item${location.pathname === "/pengembalian" ? " active" : ""}`}
+    to="/pengembalian"
+  >
+    Pengembalian
+  </Link>
+</nav>
       </aside>
 
       <main className="main-content">
