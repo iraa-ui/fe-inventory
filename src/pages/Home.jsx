@@ -201,7 +201,7 @@ function Home() {
   value={newProduct.category}
   onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })}
 >
-  <option value="">-- Pilih Category --</option>
+  <option value="">-- Pilih Category ---</option>
   <option value="Elektronik">Elektronik</option>
   <option value="Furniture">Furniture</option>
 </select>
